@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile Page</title>
+</head>
+<body>
+<h1>Welcome to {{ data }}</h1>
+<table>
+    <tr>
+        <th>StudId</th>
+        <th>Stud Name</th>
+        <th>Maths</th>
+        <th>Physics</th>
+        <th>Chemistry</th>
+        <th>average</th>
+    </tr>
+    {% for d in con %}
+
+    <tr>
+
+
+        <td>{{ d['stuid']}}</td>
+        <td>{{ d['stuname']}}</td>
+        <td>{{ d['maths']}}</td>
+        <td>{{ d['phy']}}</td>
+        <td>{{ d['chem']}}</td>
+        <td>{{ (d['maths']+d['phy']+d['chem'])/3}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
